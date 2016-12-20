@@ -7,58 +7,30 @@
 	<title>Header Resize On Scroll with Animations + Drawer Menu</title>
 
 	<link rel="stylesheet" href="css/style.css" />
-
-	<script type="text/javascript">
-		/**
-		**	Keep the following script on a separated JS file when working on production enviroment
-		**/
-	    function drawer() {
-	        var x = document.getElementById("top-drawer-menu");
-	        if (x.classList.contains("responsive")) {
-	            x.classList.remove("responsive");
-	        } else {
-	            x.classList.add("responsive");
-	        }
-	    }
-	</script>
 </head>
 
 <body>
-	<nav class="main-nav" id="main-nav">
-		<a href="#">This</a>
-		<a href="#">Little</a>
-		<a href="#">Piggy</a>
-		<a href="#">Went</a>
-		<a href="#">To</a>
-		<a href="#">Market</a>
-	</nav>
-	<div class="page-wrap">
-		<div id="wrapper" class="outer-container-row">
-			<header>
-	              <nav>
-	                  <ul id="top-drawer-menu">
-	                      <li><a href="#">Home</a></li>
-	                      <li><a href="#">Sobre</a></li>
-	                      <li><a href="#">Serviços</a></li>
-	                      <li><a href="#">Blog</a></li>
-	                      <li><a href="#">Midia</a></li>
-	                      <li><a href="#">Contato</a></li>
-	                      <li><a href="#">Área do Cliente</a></li>
-	                      <li class="icon">
-	                          <a href="javascript:void(0);" onclick="drawer()">&#9776;</a>
-	                      </li>
-	                  </ul>
-	              </nav>
-			</header>
+	<!-- COMPONENT: MOBILE-NAV -->
+	<nav id="mobile-main-navigation">
+		<div class="scroll-box">
+			<a href="#">Close Menu</a>
+			<a href="#">Nav Links</a>
 		</div>
-		<div class="content">
-			<h1>Content here</h1>
+	</nav>
+	<!-- END COMPONENT: MOBILE-NAV -->
 
-		    <p>It’s all about playing four quarters. I think we played well but the other team played well too. They took advantage of certain circumstances that arose. It’s a physical game.</p>
-		        
-		    <p>We tried to capitalize on some mistakes they made. In the third quarter they ran some plays. They are very good at throwing the football. They have a good quarterback who is a real leader. There are no statistics for that.</p>
+	<!-- PAGE WRAP -->
+	<div class="page-wrap">
+		<header>
+			<a href="#mobile-main-navigation">Mobile Menu</a>
+			<h1>Title</h1>
+		</header>
+
+		<div class="outer-container-row">
+			<!-- HERE GOES NEAT GRID CONFIGURATION -->
 		</div>
 	</div>
+	<!-- END PAGE WRAP -->
 </body>
 
 </html>
