@@ -1,0 +1,30 @@
+@import "reset";
+@import "bourbon/bourbon";
+@import "grid-settings";
+@import "neat/neat";
+
+/* =Template
+-------------------------------------------------------------- */
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	min-height: 100%;
+}
+
+.outer-container-row {
+	@include outer-container();
+    width:100%;
+    margin:0 auto;
+}
+
+.page-wrap {
+	float: right;
+	width: 100%;
+	transition: width 0.3s ease;
+	background-color: #fff;
+}
+
+/* =Header:Responsive Drawer
+-------------------------------------------------------------- */

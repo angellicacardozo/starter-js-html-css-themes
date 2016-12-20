@@ -1,0 +1,24 @@
+{
+  "name": "bourbonneatprototype",
+  "version": "1.0.0",
+  "description": "bourbon neat prototype",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "site"
+  ],
+  "author": "angellicaaraujo",
+  "license": "ISC",
+  "dependencies": {
+    "bourbon-neat": "^1.8.0"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-bower-task": "^0.4.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-express": "^1.4.1"
+  }
+}
