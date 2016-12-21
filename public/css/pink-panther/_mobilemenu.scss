@@ -3,6 +3,7 @@
 #mobile-main-navigation {
 	
 	border-right: 0.6em solid $main-color;
+	background: linear-gradient(#3e3e3e, #383838);
   
   	/* Collapsed */
 	width: 0; 
@@ -23,11 +24,46 @@
 		}
 	}
 
+	&:after {
+		content: "";
+		position: absolute;
+		top: 0;
+		right: 0;
+		height: 100%;
+		width: 2em;
+		background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
+	}
+
 	.scroll-box {
 		overflow-y: scroll;
 		overflow-x: hidden;
 		height: 100%;
 		position: relative;
+	}
+
+	#mobile-main-navigation-link-container {
+		a {
+			display: block;
+			background: linear-gradient(#3e3e3e, #383838);
+			border-top: 0.063em solid #484848;
+			border-bottom: 0.063em solid #2E2E2E;
+			color: white;
+			padding: 1em;
+
+			&:hover, &:focus {
+				background: linear-gradient(#484848, #383838);
+			}
+
+			&:after {
+				content: "";
+				position: absolute;
+				top: 0;
+				right: 0;
+				height: 100%;
+				width: 34px;
+				background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
+			}
+		}
 	}
 
 	#close-mobile-menu {

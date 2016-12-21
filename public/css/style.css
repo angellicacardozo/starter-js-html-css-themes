@@ -169,7 +169,9 @@ html, body {
     #main-navigation #main-navigation-menu .dropdown .dropdown-content {
       display: none;
       position: absolute;
-      min-width: 160px; }
+      min-width: 160px;
+      background-color: #f9f9f9;
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); }
       #main-navigation #main-navigation-menu .dropdown .dropdown-content a {
         height: auto;
         line-height: 1.2em;
@@ -187,6 +189,7 @@ html, body {
 -------------------------------------------------------------- */
 #mobile-main-navigation {
   border-right: 0.6em solid #E80C7A;
+  background: linear-gradient(#3e3e3e, #383838);
   /* Collapsed */
   width: 0;
   position: fixed;
@@ -199,11 +202,36 @@ html, body {
     left: 0; }
     #mobile-main-navigation:target + .page-wrap {
       width: 46%; }
+  #mobile-main-navigation:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 2em;
+    background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.4)); }
   #mobile-main-navigation .scroll-box {
     overflow-y: scroll;
     overflow-x: hidden;
     height: 100%;
     position: relative; }
+  #mobile-main-navigation #mobile-main-navigation-link-container a {
+    display: block;
+    background: linear-gradient(#3e3e3e, #383838);
+    border-top: 0.063em solid #484848;
+    border-bottom: 0.063em solid #2E2E2E;
+    color: white;
+    padding: 1em; }
+    #mobile-main-navigation #mobile-main-navigation-link-container a:hover, #mobile-main-navigation #mobile-main-navigation-link-container a:focus {
+      background: linear-gradient(#484848, #383838); }
+    #mobile-main-navigation #mobile-main-navigation-link-container a:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 34px;
+      background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.4)); }
   #mobile-main-navigation #close-mobile-menu {
     position: absolute;
     top: 0;
