@@ -1,0 +1,54 @@
+/* =Header:Responsive Drawer
+-------------------------------------------------------------- */
+#mobile-main-navigation {
+	
+	border-right: 0.6em solid $main-color;
+  
+  	/* Collapsed */
+	width: 0; 
+
+	position: fixed;
+	top: 0;
+	left: -0.6em;
+	height: 100%;
+
+	transition: width 0.3s ease;
+
+	&:target {
+		width: 54%;
+		left: 0;
+
+		+.page-wrap {
+	 		width: 46%;
+		}
+	}
+
+	.scroll-box {
+		overflow-y: scroll;
+		overflow-x: hidden;
+		height: 100%;
+		position: relative;
+	}
+
+	#close-mobile-menu {
+		position: absolute;
+		top: 0;
+		right: -3%;
+	}
+}
+
+#open-mobile-menu, #close-mobile-menu {
+	display: inline-block;
+	background-color: $main-color;
+	color: $main-color-text-color;
+
+	border-radius: 0.3em;
+	padding: 0.6em;
+	z-index: 999;
+}
+
+@include media($desktop) {
+	#open-mobile-menu {
+		display: none;
+	}
+}

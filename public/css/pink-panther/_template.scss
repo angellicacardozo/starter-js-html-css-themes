@@ -1,0 +1,46 @@
+@import "../reset";
+@import "../bourbon/bourbon";
+@import "../grid-settings";
+@import "../neat/neat";
+
+/* =Template
+-------------------------------------------------------------- */
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	min-height: 100%;
+	overflow-x: hidden;
+}
+
+.grid {
+	@include outer-container();
+	.row {
+		@include pad();
+	}
+}
+
+.page-wrap {
+	float: right;
+	width: 100%;
+	transition: width 0.3s ease;
+
+	@import "content";
+}
+
+@include media($mobile) {
+	.row {
+		@include span-columns(4)
+	}
+}
+@include media($tablet) {
+	.row {
+		@include span-columns(8)
+	}
+}
+@include media($desktop) {
+	.row {
+		@include span-columns(12)
+	}
+}

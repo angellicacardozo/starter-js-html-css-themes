@@ -1,0 +1,51 @@
+#main-navigation-menu {
+
+	a {
+		display: block;
+		padding: 0 0.8em;
+		font-size: 0.8em;
+	    height: 3.725em;
+	    line-height: 3.725em;
+	}
+
+	ul {
+		overflow:visible;
+
+		li {
+			float: left;
+		}
+	}
+
+	.dropdown {
+		position: relative;
+		display: inline-block;
+
+		.dropdown-content {
+			display: none;
+			position: absolute;
+			min-width: 160px;
+
+			a {
+				height: auto;
+				line-height: 1.2em;
+				padding: 1em 1em;
+			}
+		}
+
+		&:hover {
+			.dropdown-content {
+				display: block;
+			}
+		}
+	}
+}
+@include media($tablet) {
+	#main-navigation-menu {
+		display: none;
+	}
+}
+@include media($mobile) {
+	#main-navigation-menu {
+		display: none;
+	}
+}
