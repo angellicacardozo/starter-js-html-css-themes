@@ -1,0 +1,93 @@
+/* = Mobile Menu component
+-------------------------------------------------------------- */
+.mobile-menu {
+	border-right: 0.6em solid $main-color;
+	background: linear-gradient(#3e3e3e, #383838);
+	width: 0; 
+	position: fixed;
+	top: 0;
+	left: -0.6em;
+	height: 100%;
+	transition: width 0.3s ease;
+
+	/* Explicit Elements */
+	&__body {
+		&--scrollable {
+			overflow-y: scroll;
+			overflow-x: hidden;
+			height: 100%;
+			position: relative;
+		}
+	}
+
+	&__link {
+		display: block;
+		background: linear-gradient(#3e3e3e, #383838);
+		border-top: 0.063em solid #484848;
+		border-bottom: 0.063em solid #2E2E2E;
+		color: white;
+		padding: 1em;
+
+		/* Implicit states */
+
+		&:hover, &:focus {
+			background: linear-gradient(#484848, #383838);
+		}
+
+		&:after {
+			content: "";
+			position: absolute;
+			top: 0;
+			right: 0;
+			height: 100%;
+			width: 34px;
+			background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
+		}
+	}
+
+	&__close-button {
+		position: absolute;
+		top: 0;
+		right: -3%;
+	}
+
+	&__close-button, &__open-button {
+		display: inline-block;
+		background-color: $main-color;
+		color: $main-color-text-color;
+
+		border-radius: 0.3em;
+		padding: 0.6em;
+		z-index: 999;
+	}
+
+	/* Implicit Elements */
+	&:after {
+		content: "";
+		position: absolute;
+		top: 0;
+		right: 0;
+		height: 100%;
+		width: 2em;
+		background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
+	}
+
+	/* Implicit States */
+	&:target {
+		width: 54%;
+		left: 0;
+
+		/* shame on it */
+		+.page-wrap {
+	 		width: 46%;
+		}
+	}
+}
+
+@include media($desktop) {
+	.mobile-menu {
+		&__open-button {
+			display: none;
+		}
+	}
+}

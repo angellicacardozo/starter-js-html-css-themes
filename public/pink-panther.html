@@ -1,7 +1,8 @@
 <!-- RULES -->
-<!-- 1) Everything that has an ID attribute is an isolated component -->
+<!-- 1) Components and its elements are represented by classes -->
+<!--	1.1) Identify components with the rule .{block}__{element}--{state}
 <!-- 2) Each component has its own .scss file -->
-<!-- 3) Media styles for each must be within its own .scss file -->
+<!-- 3) IDs are reserved for JavaScript use ONLY -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,63 +18,65 @@
 
 <body>
 	<!-- COMPONENT: MOBILE-NAV -->
-	<nav id="mobile-main-navigation">
-		<a href="#" id="close-mobile-menu">
+	<nav class="mobile-menu" id="mobile-main-navigation">
+		<a href="#" class="mobile-menu__close-button" id="close-mobile-menu">
 			<i class="fa fa-bars" aria-hidden="true"></i>
 		</a>
-		<div id="mobile-main-navigation-link-container" class="scroll-box">
-			<a href="#">Nav Links</a>
+		<div id="mobile-main-navigation-link-container" class="mobile-menu__body--scrollable">
+			<a class="mobile-menu__link" href="#">Nav Links</a>
 		</div>
 	</nav>
 	<!-- END COMPONENT: MOBILE-NAV -->
 
-	<!-- PAGE WRAP -->
-	<div class="page-wrap">
-		<!-- COMPONENT: MAIN-NAVIGATION -->
-		<header id="main-navigation" class="grid">
-			<div class="row">
-				<h1>
-					<img src="css/pink-panther/logo.png" />
-				</h1>
-			</div>
-			<div class="row">
-				<nav id="main-navigation-menu">
-					<ul>
-	                    <li><a href="#">Home</a></li>
-	                    <li><a href="#">Sobre</a></li>
-	                    <li>
-	                        <div class="dropdown">
-	                         <a href="#">Personagens 
-	                         		<i class="fa fa-caret-square-o-down" aria-hidden="true"></i>
-							</a>
-	                          <div class="dropdown-content">
-	                              <a href="#">Pink Panther</a>
-	                              <a href="#">Inspector Clouseau</a>
-	                              <a href="#">The Little Man</a>
-	                          </div>
-	                        </div>
-	                    </li>
-	                    <li><a href="#">Blog</a></li>
-                	</ul>
-				</nav>
-            </div>
-			<a href="#mobile-main-navigation" id="open-mobile-menu">
-				<i class="fa fa-bars" aria-hidden="true"></i>
-			</a>
-		</header>
-		<!-- END COMPONENT: MAIN-NAVIGATION -->
-
-		<section class="content">
-			<div class="grid">
+	<main  class="clearfix">
+		<!-- PAGE WRAP -->
+		<div class="page-wrap">
+			<!-- COMPONENT: MAIN-NAVIGATION -->
+			<header id="main-navigation" class="grid">
 				<div class="row">
-					<p>The Pink Panther is a series of comedy-mystery films featuring an inept French police detective, Inspector Jacques Clouseau. The series began with the release of The Pink Panther (1963). The role of Clouseau was originated by, and is most closely associated with, Peter Sellers. Most of the films were directed and co-written by Blake Edwards, with theme music composed by Henry Mancini. Elements and characters inspired by the films were adapted into other media, including books, comic books and animated series.</p>
-					<p>In the movies, the Pink Panther is a large and valuable pink diamond which is first shown in the opening film in the series. The diamond is called the "Pink Panther" because the flaw at its center, when viewed closely, is said to resemble a leaping pink panther. The phrase reappears in the title of the fourth film The Return of the Pink Panther, in which the theft of the diamond is again the center of the plot. The phrase was used for all the subsequent films in the series, even when the jewel did not figure in the plot. It ultimately appeared in six of the eleven films.</p>
+					<h1>
+						<img src="css/pink-panther/logo.png" />
+					</h1>
 				</div>
-			</div>
-		</section>
+				<div class="row">
+					<nav id="main-navigation-menu">
+						<ul>
+		                    <li><a href="#">Home</a></li>
+		                    <li><a href="#">Sobre</a></li>
+		                    <li>
+		                        <div class="dropdown">
+		                         <a href="#">Personagens 
+		                         		<i class="fa fa-caret-square-o-down" aria-hidden="true"></i>
+								</a>
+		                          <div class="dropdown-content">
+		                              <a href="#">Pink Panther</a>
+		                              <a href="#">Inspector Clouseau</a>
+		                              <a href="#">The Little Man</a>
+		                          </div>
+		                        </div>
+		                    </li>
+		                    <li><a href="#">Blog</a></li>
+	                	</ul>
+					</nav>
+	            </div>
+				<a href="#mobile-main-navigation" class="mobile-menu__open-button" id="open-mobile-menu">
+					<i class="fa fa-bars" aria-hidden="true"></i>
+				</a>
+			</header>
+			<!-- END COMPONENT: MAIN-NAVIGATION -->
 
-	</div>
-	<!-- END PAGE WRAP -->
+			<section class="content">
+				<div class="grid">
+					<div class="row">
+						<p>The Pink Panther is a series of comedy-mystery films featuring an inept French police detective, Inspector Jacques Clouseau. The series began with the release of The Pink Panther (1963). The role of Clouseau was originated by, and is most closely associated with, Peter Sellers. Most of the films were directed and co-written by Blake Edwards, with theme music composed by Henry Mancini. Elements and characters inspired by the films were adapted into other media, including books, comic books and animated series.</p>
+						<p>In the movies, the Pink Panther is a large and valuable pink diamond which is first shown in the opening film in the series. The diamond is called the "Pink Panther" because the flaw at its center, when viewed closely, is said to resemble a leaping pink panther. The phrase reappears in the title of the fourth film The Return of the Pink Panther, in which the theft of the diamond is again the center of the plot. The phrase was used for all the subsequent films in the series, even when the jewel did not figure in the plot. It ultimately appeared in six of the eleven films.</p>
+					</div>
+				</div>
+			</section>
+
+		</div>
+		<!-- END PAGE WRAP -->
+	</main>
 </body>
 
 </html>

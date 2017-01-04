@@ -9,3 +9,13 @@
 	overflow:visible;
 	@import "mainnavigationmenu"	
 }
+@include media($desktop) {
+	body.smaller {
+		#main-navigation {
+			position: fixed;
+			width: 100%;
+			z-index: 999;
+			top: 0;
+		}
+	}	
+}
